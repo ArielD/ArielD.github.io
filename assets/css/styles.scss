@@ -7,3 +7,12 @@
   display: inline-block;
 }
 }
+
+.portfolio {
+  display: flex;
+  flex-wrap: nowrap;
+
+.portfolio-items {
+  margin: 10px;
+  }
+}

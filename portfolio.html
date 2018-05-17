@@ -3,4 +3,13 @@ layout: page
 title: Portfolio
 permalink: /portfolio/
 ---
-<h5>that's my poor portfolio :с</h5>
+<div class="portfolio">
+
+{% for items in site.data.portfolio %}
+<article class="portfolio-items">
+    <h4>{{items.title}}</h4>
+    <p>{{items.img}}</p>
+    <p>{{items.description}}</p>
+</article>
+{% endfor %}
+</div>
