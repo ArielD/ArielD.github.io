@@ -29,6 +29,12 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - i18n
+#  - bulma-rails
+
+sass:
+  sass_dir: _sass
+#  style: compressed
 
 collection:
   topics:

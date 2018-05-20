@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: cosplay"
+title: "Результати по тегу cosplay"
 tag: cosplay
 ---
