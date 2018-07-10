@@ -22,7 +22,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "i18n", "~> 0.1"
   gem "sass", "~> 3.5"
-#  gem "bulma-rails", "~> 0.7.1"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

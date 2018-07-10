@@ -3,9 +3,55 @@ layout: home
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Головна сторінка</h1>
-
-  <div id="container" style="min-height:300px;"></div>
-
+<div class="row">
+  <section class="col-md-6 main-content">
+    <h3 class="main-header">
+      Привет! Очень рада видеть Вас на своей страничке
+    </h3>
+  <p>Ресурс изначально создавался для того, чтобы опробовать возможности GitHub Pages, но в процессе разработки я почувствовала, что несу ответственность за этот маленький зародыш сайта, поэтому постараюсь его доделать до победного и использовать в дальнейшем в качестве блога.
+  </p>
+  <a class="btn large-button large-button__blue" src="#">Подробнее</a>
+  </section>
+  <div id="carousel" class="carousel slide d-inline-block col-md-6 vcenter" data-ride="carousel">
+       <!-- Индикаторы -->
+       <ol class="carousel-indicators">
+           <li data-target="#carousel" data-slide-to="0" class="active"></li>
+           <li data-target="#carousel" data-slide-to="1"></li>
+           <li data-target="#carousel" data-slide-to="2"></li>
+       </ol>
+       <div class="carousel-inner">
+           <div class="carousel-item item active">
+               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
+               <div class="carousel-caption">
+                   <h5>Title of the first slide</h5>
+                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+               </div>
+           </div>
+           <div class="carousel-item item">
+               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
+               <div class="carousel-caption">
+                   <h5>Title of the second slide</h5>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               </div>
+           </div>
+           <div class="carousel-item item">
+               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
+               <div class="carousel-caption">
+                   <h5>Title of the third slide</h5>
+                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+               </div>
+           </div>
+       </div>
+       <!-- Элементы управления -->
+       <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="sr-only">Предыдущий</span>
+       </a>
+       <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="sr-only">Следующий</span>
+       </a>
+   </div>
 </div>
+
+</div> <!-- home -->

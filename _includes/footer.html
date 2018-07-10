@@ -1,38 +1,42 @@
-<footer class="site-footer column is-12">
+<footer>
 
-  <div class="wrapper">
+  <div class="wrapper container">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+<div class="row">
+  <div class="col-sm-4 footer-item">
+  <header>Дарья Товчиречко</header>
+    <ul class="social">
+      <li class="social-item social-item__vk"></li>
+      <li class="social-item social-item__linkedin"></li>
+      <li class="social-item social-item__insta"></li>
+      <li class="social-item social-item__facebook"></li>
+      <li class="social-item social-item__skype"></li>
+      <li class="social-item social-item__github"></li>
+    </ul>
   </div>
 
+    <div class="col-sm-4 photo footer-item">
+      <header>{{site.title}}</header>
+      <div class="myphoto"></div>
+    </div>
+
+    <div class="col-sm-4 adress footer-item">
+      <div class="adress-email">
+        <header>Email</header>
+        <span>tovdariaolegovna@gmail.com</span>
+      </div>
+      <div class="adress-phone">
+        <header>Телефон</header>
+        <span>+38 (096) 554 12 50</span>
+      </div>
+    </div>
+</div>
+
+
+  </div>
+<div class="copyright">
+  Сайт сделан с любовью:3
+</div>
 </footer>
+<script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>

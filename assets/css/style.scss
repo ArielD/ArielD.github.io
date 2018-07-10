@@ -1,0 +1,360 @@
+---
+---
+@charset "utf-8";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$navbarHeight: 70px;
+
+$lightPink: #fdbcc4;
+$lightYellow: #fdfbcb;
+$lightBrown: #b99f9e;
+$blue: #7cd5f5;
+$green: #67c89b;
+$lightPurple: #ac9dc8;
+$darkPurple: #7258a1;
+$lightBg: #fffeee;
+
+$white: #ffffff;
+$black: #000000;
+$darkGray: #373737;
+
+$logo: 'Wendy One', sans-serif;
+$exo: 'Exo 2', sans-serif;
+$sans: 'Open Sans', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+$roboto: 'Roboto Slab', serif;
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  position: relative;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: #ffe9eb; /* Old Browsers */
+background: -webkit-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Safari 5.1-6*/
+background: -o-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Opera 11.1-12*/
+background: -moz-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Fx 3.6-15*/
+background: radial-gradient(top right, #ffe9eb, #f4f4f4); /*Standard*/
+}
+
+a:active, a:hover, a:focus {
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  & a {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    }
+}
+
+.nav-button {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+a.nav-button-item {
+  display: block;
+  position: relative;
+  margin: 10px 5px;
+  font-size: 14pt;
+  font-family: $exo;
+  text-transform: uppercase;
+  color: $white;
+  padding: 0px 5px;
+  transition: all 0.2s;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    color: $darkPurple;
+    transition: all 0.2s;
+  }
+  }
+
+.navbar {
+  min-height: $navbarHeight;
+  background-color: $lightPurple;
+  border-color: darken($lightPurple, 0.7);
+  display: flex;
+  transition: all 0.2s;
+
+  .wrap-nav {
+    margin: auto;
+  }
+}
+
+.nav-height {
+  min-height: 50px;
+  transition: all 0.2s;
+}
+
+.nav-underline {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: $darkPurple;
+    transform: translateY(21px) scale(0);
+    transition: all 0.2s; }
+    &:hover:after {
+      transform: translateY(21px) scale(1);
+      transition: all 0.2s;
+  }
+}
+
+.nav-underline-small {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: $darkPurple;
+    transform: translateY(11px) scale(0);
+    transition: all 0.2s; }
+    &:hover:after {
+      transform: translateY(11px) scale(1);
+      transition: all 0.2s;
+  }
+}
+
+.nav-logo a {
+  font-family: $logo;
+  font-size: 24pt;
+  color: $white;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 0px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+.page-content {
+  position: relative;
+  margin-top: $navbarHeight + 20px;
+  background-color: $lightBg;
+  border-radius: 3px;
+  box-shadow: 0 0 1px $lightBrown, inset 0 0 2px $white;
+  flex: 1 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.for-home {
+  margin-top: $navbarHeight;
+  min-height: 150px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  .home-description {
+    padding: 15px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: $lightBrown;
+    font-weight: bold;
+    font-size: 26pt;
+    z-index: 10;
+    font-family: $exo;
+    font-variant: small-caps;
+    text-align: right;
+    width: auto;
+    line-height: 24pt;
+    display: inline;
+    animation: appear ease-out 3s alternate;
+    //animation-duration: 2s;
+    & span {
+      display: block;
+      font-size: 6pt;
+      line-height: 5pt;
+      font-family: $exo;
+      font-variant: small-caps;
+    }
+  }
+
+}
+.carousel-inner {
+  //border: 10px solid $lightBrown;
+  //border-radius: 3px;
+
+}
+@keyframes appear {
+  0%, 10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-header {
+  text-align: center;
+  font-size: 14pt;
+  font-family: $exo;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed $lightBrown;
+  padding-bottom: 20px;
+}
+
+
+.main-content {
+  text-align: center;
+  font-size: 10pt;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $sans;
+  margin-bottom: 10px;
+}
+
+
+.large-button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 14pt;
+  color: $darkGray;
+  font-family: $ubuntu;
+  line-height: 20pt;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: $white;
+  &__blue {
+    background-color: $green;
+    &:hover {
+      background-color: $lightBg;
+      border: 2px solid $green;
+      color: $green;
+    }
+  }
+}
+
+
+
+footer {
+  background-color: $darkGray;
+  color: $white;
+  margin-top: 10px;
+  width: 100%;
+  padding-top: 5px;
+  flex: 0 0 auto;
+.myphoto {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/photo.jpg);
+  background-size: cover;
+  border-radius: 100px;
+  margin: 0 auto;
+  transition: all .2s ease;
+  &:hover {
+    background-image: url(../img/photo.jpg);
+    transition: all .2s ease;
+  }
+}
+}
+
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style: none;
+  .social-item {
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+  }
+}
+.footer-item {
+  padding: 10px;
+  font-size: 10pt;
+  font-family: $ubuntu;
+  color: $white;
+  text-align: center;
+  header {
+    margin: 5px;
+    font-size: 12pt;
+    text-transform: uppercase;
+  }
+}
+
+/* Animation */
+
+#flowers {
+//-moz-transform: scale(-1, 1);
+//-webkit-transform: scale(-1, 1);
+//-o-transform: scale(-1, 1);
+//transform: scale(-1, 1);
+//filter: FlipH;
+//-ms-filter: "FlipH";
+position: absolute;
+top: 0;
+left: 0;
+}
+
+@for $i from 0 through 10 {
+  .st#{$i} {
+    -webkit-animation: smth 3s ease-out alternate;
+    transition: all .1s ease-out;
+  }
+}
+@for $i from 10 through 30 {
+  .st#{$i} {
+    -webkit-animation: leaf 3s ease-out alternate;
+    transition: all .1s ease-out;
+  }
+}
+@for $i from 30 through 75 {
+  .st#{$i} {
+    -webkit-animation: flow 3s ease-out alternate;
+    transition: all .1s ease-out;
+  }
+}
+
+@-webkit-keyframes leaf {
+  from {
+    transform: translateX(-20px) translateY(-10px);}
+
+  100% {
+  transform: translateX(0px) translateY(0px);}
+}
+
+@-webkit-keyframes flow {
+  from {
+    transform: rotateZ(-5deg);}
+  100% {
+  transform: rotateZ(0deg);}
+}
+
+@-webkit-keyframes smth {
+  from {
+    transform: rotateZ(15deg);}
+  100% {
+  transform: rotateZ(0deg);}
+}
+
+@for $i from 0 through 75 {
+  .st#{$i}:hover {
+    fill: $lightPink;
+    transition: all .1s ease-out;
+  }
+}
+
+@import "break";
