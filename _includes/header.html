@@ -1,15 +1,18 @@
-
-<nav class="container-fluid navbar navbar-default navbar-fixed-top" role="navigation" aria-label="main navigation">
+<div class="navigation">
   <div class="container wrap-nav">
-  <div class="row">
-    <div class="col-xs-2 nav-logo">
-      <a class="site-title" href="{{ site.baseurl }}/">DariaTov</a>
+    <div class="row">
+      <div class="col-xs-2 nav-logo">
+        <a class="site-title" href="{{ site.baseurl }}/">DariaTov</a>
+      </div>
+      <div class="col-xs-10">
+        <input class="toggle" id="toggle" type="checkbox">
+        <label class="toggle" for="toggle"></label>
+        <div class="nav-button">
+            <a class="nav-button-item nav-underline" href="{{ site.baseurl }}/about/">Обо мне</a>
+            <a class="nav-button-item nav-underline" href="{{site.baseurl }}/portfolio/">Мои работы</a>
+            <a class="nav-button-item nav-underline" href="{{ site.baseurl }}/blog/">Блог</a>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-10 nav-button">
-      <a class="nav-button-item nav-underline" href="{{ site.baseurl }}/about/">Обо мне</a>
-      <a class="nav-button-item nav-underline" href="{{site.baseurl }}/portfolio/">Мои работы</a>
-      <a class="nav-button-item nav-underline" href="{{ site.baseurl }}/blog/">Блог</a>
-    </div>
-    </div>
-    </div>
-</nav>
+  </div>
+</div>

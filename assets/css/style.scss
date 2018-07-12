@@ -24,10 +24,8 @@ $sans: 'Open Sans', sans-serif;
 $ubuntu: 'Ubuntu', sans-serif;
 
 $roboto: 'Roboto Slab', serif;
-html,
-body {
+html, body {
   height: 100%;
-  overflow-y: hidden;
 }
 body {
   position: relative;
@@ -55,6 +53,18 @@ a:active, a:hover, a:focus {
     }
 }
 
+.toggle {
+  display: none;
+}
+
+label.toggle {
+  font-weight: 900;
+  font-size: 1.2em;
+  padding: 10px;
+  color: $white;
+  height: 30px;
+  width: 40px;
+}
 .nav-button {
   display: flex;
   justify-content: flex-end;
@@ -80,13 +90,18 @@ a.nav-button-item {
   }
   }
 
-.navbar {
+.navigation {
   min-height: $navbarHeight;
   background-color: $lightPurple;
   border-color: darken($lightPurple, 0.7);
   display: flex;
   transition: all 0.2s;
-
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  border-radius: 0;
   .wrap-nav {
     margin: auto;
   }
@@ -104,10 +119,10 @@ a.nav-button-item {
     height: 3px;
     display: block;
     background-color: $darkPurple;
-    transform: translateY(21px) scale(0);
+    transform: translateY(20px) scale(0);
     transition: all 0.2s; }
     &:hover:after {
-      transform: translateY(21px) scale(1);
+      transform: translateY(20px) scale(1);
       transition: all 0.2s;
   }
 }
@@ -146,7 +161,7 @@ a.nav-button-item {
 }
 .page-content {
   position: relative;
-  margin-top: $navbarHeight + 20px;
+  margin-top: 20px;
   background-color: $lightBg;
   border-radius: 3px;
   box-shadow: 0 0 1px $lightBrown, inset 0 0 2px $white;
@@ -156,7 +171,7 @@ a.nav-button-item {
 }
 
 .for-home {
-  margin-top: $navbarHeight;
+  margin-top: 0px;
   min-height: 150px;
   overflow: hidden;
   position: relative;
@@ -268,18 +283,29 @@ footer {
     transition: all .2s ease;
   }
 }
-}
 
+.copyright {
+text-align: center; }
+}
 
 .social {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 5px;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
   .social-item {
-    width: 20px;
-    height: 20px;
     margin: 3px;
+    width: auto;
+    height: auto;
+    transition: transform ease-out .2s;
+    &:hover {
+      transform: scale(1.2);
+      transition: transform ease-out .2s;
+    }
   }
 }
 .footer-item {
@@ -295,15 +321,93 @@ footer {
   }
 }
 
+
+.wrap-for-hello {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+  .wrap-for-translate {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: row;
+    width: 100px;
+    margin: 0 auto;
+    transition: all 1s ease-out;
+    &:hover > .wrap-for-cat #left-hand {
+      transform: rotate(-90deg);
+    }
+    &:hover > .wrap-for-cat #right-hand {
+      transform: rotate(90deg);
+    }
+  }
+
+  .wrap-for-cat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: center;
+    transition: all 1s ease-out;
+    z-index: 11;
+    #svgcat {
+      position: relative;
+    }
+  }
+}
+  .cat-text {
+    transform: scale(0);
+    font-size: 16pt;
+    font-family: $logo;
+    color: $lightPink;
+    z-index: 10;
+    text-align: center;
+  }
+  .wrap-for-translate:hover ~ .cat-text {
+    transform: scale(1);
+  }
+  #cat {
+    transition: all 5s ease-out;
+  }
+
+
+#left-hand{
+//animation: rotate 6s linear infinite;
+transition: all .5s ease-out;
+transform-origin: left top;
+transform: rotate(-20deg);
+position: absolute;
+top: 50%;
+right: 12px;}
+
+#right-hand{
+//animation: rotate 6s linear infinite;
+transition: all .5s ease-out;
+transform-origin: right top;
+transform: rotate(20deg);
+position: absolute;
+top: 50%;
+left: 10px;}
+#right-eye,#left-eye {
+  transform: rotate(2deg);
+  transition: all .1s ease-out;
+}
+#cat:hover > #right-eye {
+  transform: rotate(0deg);
+  transition: all .1s ease-out;
+}
+#cat:hover > #left-eye {
+  transform: rotate(0deg);
+  transition: all .1s ease-out;
+}
+
+
 /* Animation */
 
 #flowers {
-//-moz-transform: scale(-1, 1);
-//-webkit-transform: scale(-1, 1);
-//-o-transform: scale(-1, 1);
-//transform: scale(-1, 1);
-//filter: FlipH;
-//-ms-filter: "FlipH";
 position: absolute;
 top: 0;
 left: 0;
