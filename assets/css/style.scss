@@ -64,6 +64,9 @@ label.toggle {
   color: $white;
   height: 30px;
   width: 40px;
+  position: sticky;
+left: 0;
+top: 0;
 }
 .nav-button {
   display: flex;
