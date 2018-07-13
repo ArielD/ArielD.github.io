@@ -1,15 +1,30 @@
-- title: Handmade
+- title: Handmade by Panasovska Yulia
   description: ololo
-  img: smth image
+  img: ../assets/img/handmade1.jpg
+  id: pic-1
+  hide-info:
+      - ../assets/img/unicorn.jpg
+      - ../assets/img/unicorn.jpg
+      - ../assets/img/unicorn.jpg
+
+
 
 - title: Handmade1
   description: ololo1
-  img: smth image1
+  id: pic-2
+  img: ../assets/img/photo.jpg
 
 - title: Handmade2
   description: ololo2
-  img: smth image2
+  id: pic-3
+  img: ../assets/img/at.jpg
 
 - title: Handmade3
   description: ololo3
-  img: smth image3
+  id: pic-4
+  img: ../assets/img/unicorn.jpg
+
+- title: Handmade4
+  description: ololo1
+  id: pic-5
+  img: ../assets/img/at.jpg

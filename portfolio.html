@@ -7,12 +7,12 @@ permalink: /portfolio/
 
 {% for items in site.data.portfolio %}
 <article class="portfolio-items">
-    <h4>{{items.title}}</h4>
-    <p>{{items.img}}</p>
+  <h4>{{items.title}}</h4>
+    <label for="{{items.id}}" class="gallery-element">
+      <img class="p-image" src="{{items.img}}">
+    </label>
     <p>{{items.description}}</p>
 </article>
 {% endfor %}
-
-
 
 </div> <!-- Портфолио -->

@@ -54,11 +54,14 @@
 
     input[type=checkbox]:checked + label.toggle::after {
       transform: translateY(5px) rotate(45deg);
-      transition: all ease-out .3s;}
+      transition: all ease-out .3s;
+    }
 
     input[type=checkbox]:checked + label.toggle::before {
-      transform: translateY(-10px) rotate(135deg);
+      transform: translateY(-10px) rotate(-45deg);
       transition: all ease-out .3s;}
+
+
 
       .nav-underline {
         &:after {

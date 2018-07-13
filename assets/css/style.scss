@@ -464,4 +464,133 @@ left: 0;
   }
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &-items {
+    margin: 10px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .p-image {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+}
+
+  .wrap-for-box {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    min-height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+   .bg img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 96%;
+    max-height: 70%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease-out;
+    overflow-y: hidden;
+  }
+
+  .wrap-for-box .bg {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+  input.gallery-input[type="checkbox"]:checked ~ .wrap-for-box {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1; }
+
+    input.gallery-input[type="checkbox"]:checked ~ .lightbox {
+      z-index: 999;
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        top: 10px;
+        right: 20px;
+        width: 1px;
+        height: 20px;
+        transform: rotate(45deg);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        width: 1px;
+        height: 20px;
+        background-color: $white;
+        transform: rotate(-45deg);
+      }
+    }
+
+   .hide-items, .wrap-for-label {
+      position: relative;
+      width: 0px;
+      height: 0px;
+    }
+
+
+  label.lightbox[for] {
+    cursor: pointer; }
+
+  input.gallery-input[type="checkbox"] {
+    display: none; }
+  .hide-description {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: $darkGray;
+    color: $white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+
+  }
+
 @import "break";

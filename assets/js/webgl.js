@@ -25,4 +25,18 @@ $(document).ready(function() {
     }
   );
 
-}) 
+});
+
+$(document).ready(function() {
+  $('input.gallery-input[type="checkbox"]').click(function(){
+   if( $(this).is(':checked') ) {
+      $('.wrap-for-label').css({'position':'absolute', 'height': '100%', 'width': '100%'});
+      $('.hide-items').css({'position':'absolute', 'height': '100%', 'width': '100%'});
+   } else {
+      $('.wrap-for-label').css({'position':'relative', 'height': '0', 'width': '0'});
+      $('.hide-items').css({'position':'relative', 'height': '0', 'width': '0'});
+   }
+});
+
+
+})
