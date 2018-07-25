@@ -1,11 +1,14 @@
 ---
 layout: page
 title: Мои работы
-permalink: /portfolio/
+permalink: /works/
 ---
 <div class="portfolio">
-
+<div class="holder pagination-works"></div>
+<div id="itemContainer">
+<!-- Items -->
 {% for items in site.data.portfolio %}
+
 <article class="portfolio-items">
   <h4>{{items.title}}</h4>
     <label for="{{items.id}}" class="gallery-element">
@@ -14,5 +17,26 @@ permalink: /portfolio/
     <p>{{items.description}}</p>
 </article>
 {% endfor %}
+</div>
+
+<div class="hide-items">
+  {% for items in site.data.portfolio %}
+  <div class="wrap-for-label">
+ <input type="checkbox" class="gallery-input" id="{{items.id}}"/>
+ <label for="{{items.id}}" class="lightbox"></label>
+ <div class="wrap-for-box">
+   <div class="bg"><div class="wrap-for-slider">
+   <div class="responsive slider">
+     {% for inf in items.hide-info %}
+     <div><img src="{{inf}}" alt=""></div>
+     {% endfor %}
+   </div>
+
+</div>
+     <p class="hide-description">{{items.hide-description}}</p>
+</div></div>
+</div>
+{% endfor %}
+</div>
 
 </div> <!-- Портфолио -->

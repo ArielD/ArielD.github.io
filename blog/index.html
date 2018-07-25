@@ -1,0 +1,50 @@
+---
+layout: default
+title: Блог
+---
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | localize: "%d %B %Y" }}</span>
+<div class="">
+
+{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- Ссылки на страницы с разбивкой-->
+  {% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Предыдущая</a>
+  {% else %}
+    <span>Предыдущая</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="webjeda">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/blog">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Следующая</a>
+  {% else %}
+    <span>Следующая</span>
+  {% endif %}
+</div>
+{% endif %}
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
+
+</div>

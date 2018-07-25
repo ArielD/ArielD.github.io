@@ -30,11 +30,16 @@ theme: minima
 plugins:
   - jekyll-feed
   - i18n
+  - jekyll-autoprefixer
+  - jekyll-paginate
 #  - bulma-rails
 
 sass:
   sass_dir: _sass
   #style: compressed
+
+paginate: 3
+paginate_path: "blog/page:num/"
 
 
 collection:

@@ -12,7 +12,7 @@ $blue: #7cd5f5;
 $green: #67c89b;
 $lightPurple: #ac9dc8;
 $darkPurple: #7258a1;
-$lightBg: #fffeee;
+$lightBg: #FBF9FB;
 
 $white: #ffffff;
 $black: #000000;
@@ -137,10 +137,10 @@ a.nav-button-item {
     height: 3px;
     display: block;
     background-color: $darkPurple;
-    transform: translateY(11px) scale(0);
+    transform: translateY(10px) scale(0);
     transition: all 0.2s; }
     &:hover:after {
-      transform: translateY(11px) scale(1);
+      transform: translateY(10px) scale(1);
       transition: all 0.2s;
   }
 }
@@ -466,24 +466,59 @@ left: 0;
 
 .portfolio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   &-items {
     margin: 10px;
     max-width: 250px;
+    flex-basis: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    background-color: transparentize($lightPink, 0.8);
+    border-radius: 3px;
+    & h4 {
+      flex-grow: 0;
+      margin: 0;
+      padding: 5px;
+      text-align: center;
+    }
+    & p {
+      flex-grow: 1;
+      margin: 0;
+      //background-color: $lightPink;
+      padding: 5px;
+      text-align: center;
+    }
   }
   .p-image {
-    width: 100%;
-    max-height: 200px;
+    //width: 100%;
+    max-width: 80%;
+    max-height: 60%;
+    border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
+    margin:  0 auto;
+    display: block;
 
+  }
+
+  .gallery-element {
+    margin: 0;
+  }
+
+  #itemContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 200px;
+  }
+  .holder {
+    text-align: center;
   }
 }
 
@@ -502,8 +537,63 @@ left: 0;
     transition: all 0.3s ease;
     overflow: hidden;
   }
+.slick-list, .slick-track {
+      height: 100%;
+      width: 100%;
+}
 
-   .bg img {
+/* Custom Arrow */
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  font-size: 1.5em;
+  width: 25px;
+  height: 25px;
+  fill: #666666;
+  transition: all ease .2s;
+  z-index: 22;
+  &:hover {
+    cursor: pointer;
+    fill: #999999;
+  }
+  &:focus {
+    outline: none;
+  }
+  }
+
+.next {
+  color: #999;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  font-size: 1.5em;
+  width: 25px;
+  height: 25px;
+  fill: #666666;
+  transition: all ease .2s;
+  &:hover {
+    cursor: pointer;
+    fill: #999999;
+  }
+  &:focus {
+    outline: none;
+  }
+  }
+
+  .slick-disabled {
+    fill: transparentize(#666666, 0.5);
+    &:hover {
+      fill: transparentize(#666666, 0.5);
+    }
+  }
+
+  .wrap-for-slider {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+   .bg .slider {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -515,14 +605,32 @@ left: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition: transform 0.5s ease-out;
     overflow-y: hidden;
+    height: 100%;
+    width: 100%;
   }
 
+  .slick-slide img {
+    position: absolute;
+max-width: 90%;
+max-height: 90%;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    &:focus {
+    outline: none;}
+  }
   .wrap-for-box .bg {
     background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     top: 50%;
     left: 50%;
     width: 100vw;
@@ -592,5 +700,66 @@ left: 0;
     margin: 0;
 
   }
+
+  .pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+
+.pagination a {
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+
+.pagination, .pagination-works {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+ }
+
+ .pagination-works {
+   a {
+     padding: 7px 18px;
+     border: 1px solid #eee;
+     margin: 0;
+     background-color: #ffffff;
+     display: inline-block;
+     &:hover {
+         background-color: #f1f1f1;
+         color: #333;
+     }
+   }
+   span {
+     padding: 7px 18px;
+     border: 1px solid #eee;
+     margin: 0;
+     background-color: #ffffff;
+     display: inline-block;
+   }
+
+ }
+
+
+
+ .holder a.jp-next, .holder a.jp-previous {
+   margin-left: 0;
+   margin-right: 0;
+ }
+ .holder a.jp-current, a.jp-current:hover {
+   color: #333;
+
+ }
+ .holder a.jp-disabled, .jp-current {
+   color: #333;
+ }
+.holder a.jp-disabled:hover, a.jp-current:hover {
+   background-color: #ffffff;
+}
 
 @import "break";

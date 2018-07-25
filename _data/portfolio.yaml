@@ -1,30 +1,79 @@
 - title: Handmade by Panasovska Yulia
   description: ololo
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
   img: ../assets/img/handmade1.jpg
   id: pic-1
-  hide-info:
-      - ../assets/img/unicorn.jpg
-      - ../assets/img/unicorn.jpg
-      - ../assets/img/unicorn.jpg
+  hide-info: [ '../assets/img/unicorn.jpg',
+    '../assets/img/handmade1.jpg',
+    '../assets/img/unicorn.jpg' ]
 
 
 
 - title: Handmade1
-  description: ololo1
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ, что Data Scientist – это статистик, живущий в Сан-Франциско. Смешно, хотя не сильно обнадеживает тех, кто живет не в Сан-Франциско, правда? Хорошо, тогда еще одно определение: Data Scientist – это тот, кто разбирается в статистике лучше, чем любой программист, и разбирается в программировании лучше, чем любой статистик.'
   id: pic-2
-  img: ../assets/img/photo.jpg
+  img: ../assets/img/yulia.jpg
+  hide-info: [ '../assets/img/yulia.jpg',
+    '../assets/img/handmade1.jpg',
+    '../assets/img/unicorn.jpg' ]
 
 - title: Handmade2
   description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
   id: pic-3
-  img: ../assets/img/at.jpg
+  img: ../assets/img/zoopolice.jpg
 
-- title: Handmade3
-  description: ololo3
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
   id: pic-4
-  img: ../assets/img/unicorn.jpg
+  img: ../assets/img/zoopolice.jpg
 
-- title: Handmade4
-  description: ololo1
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
   id: pic-5
-  img: ../assets/img/at.jpg
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-6
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-3
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-7
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-8
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-9
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-10
+  img: ../assets/img/zoopolice.jpg
+
+- title: Handmade2
+  description: ololo2
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-11
+  img: ../assets/img/zoopolice.jpg

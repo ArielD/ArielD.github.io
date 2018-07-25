@@ -10,7 +10,8 @@ layout: home
     </h3>
   <p>Ресурс изначально создавался для того, чтобы опробовать возможности GitHub Pages, но в процессе разработки я почувствовала, что несу ответственность за этот маленький зародыш сайта, поэтому постараюсь его доделать до победного и использовать в дальнейшем в качестве блога.
   </p>
-  <a class="btn large-button large-button__blue" src="#">Подробнее</a>
+  <div class="blog-index">
+</div>
   <div class="wrap-for-hello">
 <div class="wrap-for-translate">
   <div class="wrap-for-cat">
@@ -301,5 +302,7 @@ layout: home
        </a>
    </div>
 </div>
-
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% include post_detail.html %}
 </div> <!-- home -->
