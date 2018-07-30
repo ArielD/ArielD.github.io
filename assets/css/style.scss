@@ -24,6 +24,10 @@ $sans: 'Open Sans', sans-serif;
 $ubuntu: 'Ubuntu', sans-serif;
 
 $roboto: 'Roboto Slab', serif;
+
+input {
+  color: #333333;
+}
 html, body {
   height: 100%;
 }
@@ -903,6 +907,9 @@ transform: translate(-50%, -50%);
   list-style: none;
   padding: 0;
   margin: 0;
+  h2 {
+    margin-top: 0px;
+  }
   li {
     margin: 10px;
     background: darken($lightBg, 1%);
@@ -944,5 +951,18 @@ transform: translate(-50%, -50%);
   font-weight: bold;
   text-align: center;
 }
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .about-content {
+    padding: 15px;
+  }
+}
 
+img {
+  max-height: 400px;
+  margin-bottom: 20px
+
+}
 @import "break";
