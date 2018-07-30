@@ -8,6 +8,6 @@
     <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
 {% endif %}
 </h1>
-<div class="entry-content">{{ content | truncatewords: 50 | remove: "<p>" | remove: "</p>" }}</div>
+<div class="entry-content">{{ content | truncatewords: 50 | remove: "<p>" | remove: "</p>" | remove: "<s>" | remove: </s> | remove: <i> | remove: </i> | remove: <b> | remove: </b> }}</div>
 <a class="btn large-button large-button__blue" href="{{ root_url }}{{ post.url }}">Подробнее</a>
 </div>
