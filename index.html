@@ -269,27 +269,24 @@ layout: home
            <li data-target="#carousel" data-slide-to="2"></li>
        </ol>
        <div class="carousel-inner">
-           <div class="carousel-item item active">
-               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
-               <div class="carousel-caption">
-                   <h5>Title of the first slide</h5>
-                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-               </div>
-           </div>
-           <div class="carousel-item item">
-               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
-               <div class="carousel-caption">
-                   <h5>Title of the second slide</h5>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-               </div>
-           </div>
-           <div class="carousel-item item">
-               <img class="img-fluid" src="../assets/img/at.jpg" alt="...">
-               <div class="carousel-caption">
-                   <h5>Title of the third slide</h5>
-                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-               </div>
-           </div>
+         {% for items in site.data.portfolio limit:1 %}
+         <div class="carousel-item item active">
+             <img class="img-fluid" src="{{items.small-img}}" alt="...">
+             <div class="carousel-caption">
+
+                 <p class="carousel-descr">{{items.description}}</p>
+             </div>
+         </div>
+         {% endfor %}
+         {% for items in site.data.portfolio limit:2 offset:1 %}
+         <div class="carousel-item item">
+             <img class="img-fluid" src="{{items.small-img}}" alt="...">
+             <div class="carousel-caption">
+
+                 <p class="carousel-descr">{{items.description}}</p>
+             </div>
+         </div>
+         {% endfor %}
        </div>
        <!-- Элементы управления -->
        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">

@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "sass", "~> 3.5"
   gem 'jekyll-autoprefixer'
   gem 'jekyll-paginate'
+  gem "wdm", ">= 0.1.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

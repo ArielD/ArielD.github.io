@@ -37,10 +37,19 @@ background: -webkit-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Safari 5.1-6*/
 background: -o-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Opera 11.1-12*/
 background: -moz-radial-gradient(top right,#ffe9eb,#f4f4f4); /*Fx 3.6-15*/
 background: radial-gradient(top right, #ffe9eb, #f4f4f4); /*Standard*/
+font-family: $sans;
 }
 
 a:active, a:hover, a:focus {
   text-decoration: none;
+}
+
+a {
+  color: $green;
+  text-shadow: 1px 1px 0px transparentize(#696969, 0.3);
+  &:hover, &:active, &:focus {
+    color: darken($green, 10%);
+  }
 }
 .menu {
   display: flex;
@@ -90,6 +99,7 @@ a.nav-button-item {
     text-decoration: none;
     color: $darkPurple;
     transition: all 0.2s;
+    text-shadow: none;
   }
   }
 
@@ -207,9 +217,7 @@ a.nav-button-item {
   }
 
 }
-.carousel-inner {
-  //border: 10px solid $lightBrown;
-  //border-radius: 3px;
+.carousel-descr {
 
 }
 @keyframes appear {
@@ -267,6 +275,9 @@ a.nav-button-item {
 
 footer {
   background-color: $darkGray;
+  background-image: url(../img/flowers_bckgr.png);
+  background-repeat: no-repeat;
+  background-position: top right;
   color: $white;
   margin-top: 10px;
   width: 100%;
@@ -282,7 +293,7 @@ footer {
   margin: 0 auto;
   transition: all .2s ease;
   &:hover {
-    background-image: url(../img/photo.jpg);
+    background-image: url(../img/photohov.jpg);
     transition: all .2s ease;
   }
 }
@@ -478,8 +489,6 @@ left: 0;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    background-color: transparentize($lightPink, 0.8);
-    border-radius: 3px;
     & h4 {
       flex-grow: 0;
       margin: 0;
@@ -489,20 +498,83 @@ left: 0;
     & p {
       flex-grow: 1;
       margin: 0;
-      //background-color: $lightPink;
+      background-color: $green;
       padding: 5px;
       text-align: center;
+      line-height: 10pt;
+      color: white;
+      font-variant: small-caps;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      height: 100%;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -17px;
+        right: 20px;
+        height: 0;
+        width: 0;
+        border-bottom: 17px solid $green;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+      }
+      .p-descr {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        padding-bottom: 5px;
+        position: relative;
+        &:before {
+          content: '';
+          border-bottom: 1px dashed #fff;
+          width: 150px;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          display: block;
+          left: 50%;
+          margin-left: -75px;
+          opacity: 0.7;
+      }
+      }
+      .p-date {
+        position: relative;
+        font-variant: small-caps;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        margin-top: 3px;
+        font-size: 9pt;
+        opacity: 0.7;
+        &:before {
+          content: '';
+          top: 0;
+          left: -20px;
+          position: absolute;
+          width: 15px;
+          height: 13px;
+          background: url(../img/calendar.svg) no-repeat;
+        }
+      }
     }
   }
   .p-image {
     //width: 100%;
-    max-width: 80%;
+    max-width: 100%;
     max-height: 60%;
-    border-radius: 3px;
+    border-radius: 1px;
     overflow: hidden;
     cursor: pointer;
     margin:  0 auto;
     display: block;
+    transition: all .3s ease-out;
+    &:hover {
+      opacity: 0.8;
+      transition: all .3s ease-out;
+    }
 
   }
 
@@ -604,7 +676,6 @@ left: 0;
     transform: translate(-50%, -50%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition: transform 0.5s ease-out;
-    overflow-y: hidden;
     height: 100%;
     width: 100%;
   }
@@ -705,34 +776,39 @@ transform: translate(-50%, -50%);
     padding: 7px 18px;
     border: 1px solid #eee;
     margin-left: -2px;
-    margin-right: -2px;
+    //margin-right: -2px;
     background-color: #ffffff;
     display: inline-block;
+    cursor: pointer;
+    text-shadow: none;
   }
 
 .pagination a {
     &:hover {
         background-color: #f1f1f1;
-        color: #333;
+
     }
  }
 
 .pagination, .pagination-works {
     display: flex;
     justify-content: center;
-    cursor: pointer;
+
  }
 
  .pagination-works {
+   cursor: pointer;
    a {
      padding: 7px 18px;
      border: 1px solid #eee;
      margin: 0;
      background-color: #ffffff;
      display: inline-block;
+     text-shadow: none;
      &:hover {
          background-color: #f1f1f1;
          color: #333;
+
      }
    }
    span {
@@ -750,16 +826,123 @@ transform: translate(-50%, -50%);
  .holder a.jp-next, .holder a.jp-previous {
    margin-left: 0;
    margin-right: 0;
+   position: relative;
  }
+ .blog-next, .blog-prev {
+   position: relative;
+ }
+ .jp-next:before, .blog-next::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 24px;
+   height: 24px;
+   background: url(../img/arrow.svg);
+   margin-left: -12px;
+   margin-top: -12px;
+ }
+
+ .jp-previous:before, .blog-prev:before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 24px;
+   height: 24px;
+   background: url(../img/arrow.svg);
+   transform: rotate(180deg);
+   margin-left: -12px;
+   margin-top: -12px;
+
+ }
+ .holder {
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
  .holder a.jp-current, a.jp-current:hover {
-   color: #333;
+   //color: #333;
 
  }
  .holder a.jp-disabled, .jp-current {
-   color: #333;
+   //color: #333;
  }
 .holder a.jp-disabled:hover, a.jp-current:hover {
    background-color: #ffffff;
+}
+
+
+.page-blog {
+  max-width: 850px;
+}
+
+.entry-content {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.header-last-pb {
+  padding: 3px;
+  font-weight: 500;
+  background-color: #ededed;
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+.wrap-for-last-post {
+  padding: 10px;
+  border: 1px dashed $lightBrown;
+  position: relative;
+  margin-top: 15px;
+  background: darken($lightBg, 0.8);
+}
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 10px;
+    background: darken($lightBg, 1%);
+    padding: 10px;
+  }
+  .post-excerpt {
+    padding-top: 10px;
+  }
+}
+
+.post-meta {
+  position: relative;
+  margin-left: 18px;
+  font-size: 9pt;
+  opacity: 0.7;
+  display: inline;
+}
+.post-meta:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  background: url(../img/calendar-blog.svg) no-repeat;
+
+}
+
+.highligher-rouge {
+  text-shadow: none;
+}
+
+.post-content {
+  padding-top: 15px;
+}
+.tag-header {
+  font-variant: small-caps;
+  color: #6a6a6a;
+  font-weight: bold;
+  text-align: center;
 }
 
 @import "break";

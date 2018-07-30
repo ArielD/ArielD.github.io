@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Мои работы
-permalink: /works/
+permalink: /myworks/
 ---
 <div class="portfolio">
 <div class="holder pagination-works"></div>
@@ -10,11 +10,12 @@ permalink: /works/
 {% for items in site.data.portfolio %}
 
 <article class="portfolio-items">
-  <h4>{{items.title}}</h4>
     <label for="{{items.id}}" class="gallery-element">
-      <img class="p-image" src="{{items.img}}">
+      <img class="p-image" src="{{items.small-img}}">
     </label>
-    <p>{{items.description}}</p>
+    <p><span class="p-descr">{{items.description}}</span>
+      <span class="p-date">{{items.date}}</span>
+    </p>
 </article>
 {% endfor %}
 </div>

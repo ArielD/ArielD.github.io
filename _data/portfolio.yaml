@@ -1,79 +1,81 @@
-- title: Handmade by Panasovska Yulia
-  description: ololo
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  img: ../assets/img/handmade1.jpg
-  id: pic-1
-  hide-info: [ '../assets/img/unicorn.jpg',
-    '../assets/img/handmade1.jpg',
-    '../assets/img/unicorn.jpg' ]
-
-
-
-- title: Handmade1
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ, что Data Scientist – это статистик, живущий в Сан-Франциско. Смешно, хотя не сильно обнадеживает тех, кто живет не в Сан-Франциско, правда? Хорошо, тогда еще одно определение: Data Scientist – это тот, кто разбирается в статистике лучше, чем любой программист, и разбирается в программировании лучше, чем любой статистик.'
-  id: pic-2
-  img: ../assets/img/yulia.jpg
-  hide-info: [ '../assets/img/yulia.jpg',
-    '../assets/img/handmade1.jpg',
-    '../assets/img/unicorn.jpg' ]
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-3
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-4
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-5
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-6
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-3
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
-  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-7
-  img: ../assets/img/zoopolice.jpg
-
-- title: Handmade2
-  description: ololo2
+- title: Bear
+  description: Немножко ручной работы для новогоднего подарочка.
   hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
   id: pic-8
-  img: ../assets/img/zoopolice.jpg
+  date: '29.12.2017'
+  img: ../assets/img/bear.jpg
+  small-img: ../assets/img/bear_small.jpg
+  hide-info: [ '../assets/img/bear.jpg' ]
 
-- title: Handmade2
-  description: ololo2
+- title: Handmade by Panasovska Yulia
+  description: Одностраничник для Панасовской Юлии, где она теперь может делиться своими изделиями.
   hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-9
-  img: ../assets/img/zoopolice.jpg
+  img: ../assets/img/handmade1.png
+  small-img: ../assets/img/handmade_small.jpg
+  id: pic-7
+  date: '20.07.2017'
+  hide-info: [ '../assets/img/handmade1.png',
+    '../assets/img/handmade2.png',
+    '../assets/img/handmade3.png',
+    '../assets/img/handmade4.png' ]
 
-- title: Handmade2
-  description: ololo2
+- title: Whip
+  description: Хлыст для косплейного образа Люси Хартифилии из Хвоста феи.
   hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-10
-  img: ../assets/img/zoopolice.jpg
+  id: pic-6
+  date: '16.07.2017'
+  img: ../assets/img/whip1.jpg
+  small-img: ../assets/img/whip_small.jpg
+  hide-info: [ '../assets/img/whip1.jpg',
+    '../assets/img/whip2.jpg' ]
 
-- title: Handmade2
-  description: ololo2
+- title: GV
+  description: Неплохой мультсериал. Заслуживает места в моем блокноте для рисования.
+  hide-description: 'Не заслужить там места очень трудно. На самом деле, мульт смотриться на одном дыхании, очень интересный и оригинальный.'
+  id: pic-5
+  date: '29.07.2016'
+  img: ../assets/img/gv.jpg
+  small-img: ../assets/img/gv_small.jpg
+  hide-info: [ '../assets/img/gv.jpg' ]
+
+- title: Anna
+  description: Еще одна попытка. Я все еще не могу понять, что делаю в своей жизни не так.
   hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
-  id: pic-11
-  img: ../assets/img/zoopolice.jpg
+  id: pic-4
+  date: '24.07.2016'
+  img: ../assets/img/anna1.jpg
+  small-img: ../assets/img/anna_small.jpg
+  hide-info: [ '../assets/img/anna1.jpg',
+    '../assets/img/anna2.jpg' ]
+
+- title: Yulia
+  description: Моя первая попытка нарисовать человека в стиле оняме. Вроде как неплохо получилось.
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ, что Data Scientist – это статистик, живущий в Сан-Франциско. Смешно, хотя не сильно обнадеживает тех, кто живет не в Сан-Франциско, правда? Хорошо, тогда еще одно определение: Data Scientist – это тот, кто разбирается в статистике лучше, чем любой программист, и разбирается в программировании лучше, чем любой статистик.'
+  id: pic-3
+  date: '22.07.2016'
+  img: ../assets/img/yulia1.jpg
+  small-img: ../assets/img/yulia_small.jpg
+  hide-info: [ '../assets/img/yulia1.jpg',
+    '../assets/img/yulia2.jpg' ]
+
+- title: Zoopolice
+  description: Покупка нового блокнота спровоцировала новый рисуночек. Люблю эти карандаши:3
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-2
+  date: '08.05.2016'
+  img: ../assets/img/zoopolice1.jpg
+  small-img: ../assets/img/zoopolice_small.jpg
+  hide-info: [ '../assets/img/zoopolice1.jpg',
+    '../assets/img/zoopolice2.jpg',
+    '../assets/img/zoopolice3.jpg',
+    '../assets/img/zoopolice4.jpg' ]
+
+- title: SasuSaku
+  description: Очень красивый арт, захотелось перерисовать себе.
+  hide-description: 'Если задать такой вопрос жителю Сан-Франциско, можно получить ответ'
+  id: pic-1
+  date: '07.10.2015'
+  img: ../assets/img/sasusaku1.jpg
+  small-img: ../assets/img/sasusaku_small.jpg
+  hide-info: [ '../assets/img/sasusaku1.jpg',
+    '../assets/img/sasusaku2.jpg' ]

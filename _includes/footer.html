@@ -147,17 +147,19 @@
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/jPages.min.js"></script>
 <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 <script src="{{site.baseurl}}/assets/js/slick.min.js"></script>
+<script id="dsq-count-scr" src="//arield.disqus.com/count.js" async></script>
 
 <script type="text/javascript">
 jQuery(function(){
 
 jQuery("div.holder").jPages({
   containerID : "itemContainer",
-  perPage : 4,
+  perPage : 20,
   minHeight : false,
-  previous : "Предыдущая",
-  next : "Следующая",
-  fallback : 0
+  previous : " ",
+  next : " ",
+  fallback : 0,
+  midRange: 2
 });
 
 
@@ -168,7 +170,7 @@ jQuery("div.holder").jPages({
 var backButton = '<span class="prev"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></span>';
 var nextButton = '<span class="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180)"></path></svg></span>';
 $(document).ready(function(){
-$('.responsive').slick({dots: true,
+$('.responsive').slick({dots: false,
   arrows: true,
 prevArrow: backButton,
 nextArrow: nextButton,
@@ -183,7 +185,7 @@ slidesToScroll: 1,
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: true,
-      dots: true,
+      dots: false,
       arrows: true
     }
   },
@@ -192,7 +194,7 @@ slidesToScroll: 1,
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       arrows: true
     }
   },
@@ -201,14 +203,14 @@ slidesToScroll: 1,
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       arrows: false
     }
   }
   // You can unslick at a given breakpoint now by adding:
   // settings: "unslick"
   // instead of a settings object
-] 
+]
 });
 });
 
