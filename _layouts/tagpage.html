@@ -11,7 +11,7 @@ layout: blog
     <span class="post-meta">{% include date.html date=post.date %}</span>
   <div class="post-excerpt">
 
-    {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+    {{ post.excerpt | truncatewords: 50 | remove: "<p>" | remove: "</p>" | remove: "<s>" | remove: "</s>" | remove: "<i>" | remove: "</i>" | remove: "<b>" | remove: "</b>" }}</div>
     </div>
   </li>
 {% endfor %}
