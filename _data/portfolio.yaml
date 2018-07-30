@@ -14,10 +14,10 @@
   small-img: ../assets/img/handmade_small.jpg
   id: pic-7
   date: '20.07.2017'
-  hide-info: [ '../assets/img/handmade1.png',
-    '../assets/img/handmade2.png',
-    '../assets/img/handmade3.png',
-    '../assets/img/handmade4.png' ]
+  hide-info: [ '../assets/img/handmade1.jpg',
+    '../assets/img/handmade2.jpg',
+    '../assets/img/handmade3.jpg',
+    '../assets/img/handmade4.jpg' ]
 
 - title: Whip
   description: Хлыст для косплейного образа Люси Хартифилии из Хвоста феи.
