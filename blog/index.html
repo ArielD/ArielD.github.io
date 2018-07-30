@@ -10,7 +10,7 @@ title: Блог
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <span class="post-meta">{% include date.html date=page.date %}</span>
+        <p class="post-meta">{% include date.html date=post.date %}</p>
 <div class="post-excerpt">
 
 {{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
